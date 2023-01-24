@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-01-24 14:13:09.414707",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "navbar_background_color",
+  "container_bg_color",
+  "branding_app_name",
+  "application_logo",
+  "app_logo_set",
+  "card_color"
+ ],
+ "fields": [
+  {
+   "fieldname": "navbar_background_color",
+   "fieldtype": "Data",
+   "label": "Navbar Background Color"
+  },
+  {
+   "fieldname": "container_bg_color",
+   "fieldtype": "Data",
+   "label": "Container Bg Color"
+  },
+  {
+   "fieldname": "branding_app_name",
+   "fieldtype": "Data",
+   "label": "Branding App Name"
+  },
+  {
+   "fieldname": "application_logo",
+   "fieldtype": "Attach",
+   "label": "Application Logo"
+  },
+  {
+   "default": "0",
+   "fieldname": "app_logo_set",
+   "fieldtype": "Check",
+   "label": "App Logo Set"
+  },
+  {
+   "fieldname": "card_color",
+   "fieldtype": "Data",
+   "label": "Card Color"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-01-24 14:13:09.414707",
+ "modified_by": "Administrator",
+ "module": "Color Settings",
+ "name": "Color Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

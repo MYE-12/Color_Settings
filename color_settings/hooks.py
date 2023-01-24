@@ -1,4 +1,6 @@
+from __future__ import unicode_literals
 from . import __version__ as app_version
+from . import __logo__ as app_logo
 
 app_name = "color_settings"
 app_title = "Color Settings"
@@ -6,16 +8,17 @@ app_publisher = "Yousuf"
 app_description = "Color "
 app_email = "mohamedyousufesi46@gmail.com"
 app_license = "MIT"
+app_logo_url = '/assets/color_settings/images/sample.jpg'
 
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/color_settings/css/color_settings.css"
-# app_include_js = "/assets/color_settings/js/color_settings.js"
+app_include_js = "/assets/color_settings/js/coloring.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/color_settings/css/color_settings.css"
+web_include_css = "/assets/color_settings/css/login.css"
 # web_include_js = "/assets/color_settings/js/color_settings.js"
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -44,6 +47,10 @@ app_license = "MIT"
 # role_home_page = {
 #	"Role": "home_page"
 # }
+website_context = {
+	"favicon": app_logo or "/assets/color_settings/images/sample.jpg",
+	"splash_image": app_logo or "/assets/color_settings/images/sample.jpg"
+}
 
 # Generators
 # ----------
@@ -130,6 +137,7 @@ app_license = "MIT"
 #		"color_settings.tasks.monthly"
 #	],
 # }
+boot_session = "color_settings.api.boot_session"
 
 # Testing
 # -------
@@ -185,3 +193,6 @@ app_license = "MIT"
 # auth_hooks = [
 #	"color_settings.auth.validate"
 # ]
+override_whitelisted_methods = {
+	"frappe.utils.change_log.show_update_popup": "color_settings.api.ignore_update_popup"
+}
