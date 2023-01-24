@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include color_settings *.css
+recursive-include color_settings *.csv
+recursive-include color_settings *.html
+recursive-include color_settings *.ico
+recursive-include color_settings *.js
+recursive-include color_settings *.json
+recursive-include color_settings *.md
+recursive-include color_settings *.png
+recursive-include color_settings *.py
+recursive-include color_settings *.svg
+recursive-include color_settings *.txt
+recursive-exclude color_settings *.pyc
