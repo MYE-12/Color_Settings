@@ -9,10 +9,14 @@
  "field_order": [
   "navbar_background_color",
   "container_bg_color",
+  "font_color",
+  "app_logo_set",
+  "column_break_4",
   "branding_app_name",
   "application_logo",
-  "app_logo_set",
-  "card_color"
+  "card_color",
+  "primary",
+  "secondary"
  ],
  "fields": [
   {
@@ -45,12 +49,31 @@
    "fieldname": "card_color",
    "fieldtype": "Data",
    "label": "Card Color"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "primary",
+   "fieldtype": "Data",
+   "label": "Primary"
+  },
+  {
+   "fieldname": "secondary",
+   "fieldtype": "Data",
+   "label": "Secondary"
+  },
+  {
+   "fieldname": "font_color",
+   "fieldtype": "Data",
+   "label": "Font Color"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-01-24 14:13:09.414707",
+ "modified": "2023-01-24 23:40:49.335817",
  "modified_by": "Administrator",
  "module": "Color Settings",
  "name": "Color Settings",
