@@ -19,11 +19,11 @@ $(window).on('load', function() {
         if (frappe.boot.color_settings.card_color) {
             $(':root').css('--fg-color', frappe.boot.color_settings.card_color);
         }
-        if (frappe.boot.color_settings.container_bg_color) {
+        if (frappe.boot.color_settings.card_color) {
             $('.layout-main-section').css('--fg-color', frappe.boot.color_settings.card_color);
         }
-        if (frappe.boot.color_settings.container_bg_color) {
-            $(':root').css('--bg-gradiant',(`linear-gradient(90deg,${frappe.boot.color_settings.container_bg_color},${frappe.boot.color_settings.card_color}`));
+        if (frappe.boot.color_settings.container_bg_color && frappe.boot.color_settings.background_colour_right) {
+            $(':root').css('--bg-gradiant',(`linear-gradient(90deg,${frappe.boot.color_settings.container_bg_color},${frappe.boot.color_settings.background_colour_right}`));
         }
     })
 })

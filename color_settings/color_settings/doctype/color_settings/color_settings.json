@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "navbar_background_color",
+  "background_colour_right",
   "container_bg_color",
   "font_color",
   "app_logo_set",
@@ -22,17 +23,17 @@
   {
    "fieldname": "navbar_background_color",
    "fieldtype": "Color",
-   "label": "Navbar Background Color"
+   "label": "Header Background Colour"
   },
   {
    "fieldname": "container_bg_color",
    "fieldtype": "Color",
-   "label": "Container Bg Color"
+   "label": "Background Colour Left"
   },
   {
    "fieldname": "branding_app_name",
    "fieldtype": "Data",
-   "label": "Branding App Name"
+   "label": "App Name"
   },
   {
    "fieldname": "application_logo",
@@ -48,7 +49,7 @@
   {
    "fieldname": "card_color",
    "fieldtype": "Color",
-   "label": "Card Color"
+   "label": "Card Colour"
   },
   {
    "fieldname": "column_break_4",
@@ -57,23 +58,28 @@
   {
    "fieldname": "primary",
    "fieldtype": "Color",
-   "label": "Primary"
+   "label": "Button Colour"
   },
   {
    "fieldname": "secondary",
    "fieldtype": "Color",
-   "label": "Secondary"
+   "label": "Menu Color"
   },
   {
    "fieldname": "font_color",
    "fieldtype": "Color",
-   "label": "Font Color"
+   "label": "Text Color"
+  },
+  {
+   "fieldname": "background_colour_right",
+   "fieldtype": "Color",
+   "label": "Background Colour Right"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-02-02 16:27:13.540731",
+ "modified": "2023-02-02 17:10:53.895868",
  "modified_by": "Administrator",
  "module": "Color Settings",
  "name": "Color Settings",
