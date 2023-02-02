@@ -1,8 +1,8 @@
 :root {
-  --nova-primary:#4c7752;
-  --nova-secondary:#7fb19c;
+  --nova-primary:#eff1f0;
+  --nova-secondary:#ced6d3;
   --primary:var(--nova-primary);
-  --n-white:#0a0c0a;
+  --n-white:#f4fcf4;
   --bg-color: var( --n-white);
   --bg-gradiant: linear-gradient(90deg,#A52A2A.#FFE4C4);
 
@@ -15,7 +15,7 @@
   --avatar-color-bg:var(--nova-secondary);
   --avatar-color-text:white;
   --dropdown-bg-color:#f3f3f3;
-  --n-black:#000000;
+  --n-black:#ffffff;
   
   }
 .page-container {background-image:var(--bg-gradiant) !important;background-color: var(--bg-color) !important;}.page-head {background-image: var(--bg-gradiant) !important;} .nav-link{color:var( 
