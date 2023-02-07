@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-01-24 14:13:09.414707",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "navbar_background_color",
+  "background_colour_right",
+  "container_bg_color",
+  "font_color",
+  "secondary",
+  "favicon_logo",
+  "column_break_4",
+  "application_logo",
+  "header_logo_width",
+  "branding_app_name",
+  "card_color",
+  "primary",
+  "app_logo_set"
+ ],
+ "fields": [
+  {
+   "fieldname": "navbar_background_color",
+   "fieldtype": "Color",
+   "label": "Header Background Colour"
+  },
+  {
+   "fieldname": "container_bg_color",
+   "fieldtype": "Color",
+   "label": "Background Colour Left"
+  },
+  {
+   "fieldname": "branding_app_name",
+   "fieldtype": "Data",
+   "label": "App Name"
+  },
+  {
+   "description": "Header (\nUse Transparent Image for better view )",
+   "fieldname": "application_logo",
+   "fieldtype": "Attach",
+   "label": "Application Logo"
+  },
+  {
+   "default": "0",
+   "fieldname": "app_logo_set",
+   "fieldtype": "Check",
+   "label": "App Logo Set"
+  },
+  {
+   "fieldname": "card_color",
+   "fieldtype": "Color",
+   "label": "Card Colour"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "primary",
+   "fieldtype": "Color",
+   "label": "Button Colour"
+  },
+  {
+   "fieldname": "secondary",
+   "fieldtype": "Color",
+   "label": "Menu Color"
+  },
+  {
+   "fieldname": "font_color",
+   "fieldtype": "Color",
+   "label": "Text Color"
+  },
+  {
+   "fieldname": "background_colour_right",
+   "fieldtype": "Color",
+   "label": "Background Colour Right"
+  },
+  {
+   "fieldname": "header_logo_width",
+   "fieldtype": "Data",
+   "label": "Header Logo Width"
+  },
+  {
+   "description": "Favicon,Splash",
+   "fieldname": "favicon_logo",
+   "fieldtype": "Attach",
+   "label": "Logo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-02-07 21:48:22.567581",
+ "modified_by": "Administrator",
+ "module": "Color Settings",
+ "name": "Color Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
