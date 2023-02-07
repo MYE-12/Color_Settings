@@ -11,13 +11,15 @@
   "background_colour_right",
   "container_bg_color",
   "font_color",
-  "app_logo_set",
+  "secondary",
+  "favicon_logo",
   "column_break_4",
-  "branding_app_name",
   "application_logo",
+  "header_logo_width",
+  "branding_app_name",
   "card_color",
   "primary",
-  "secondary"
+  "app_logo_set"
  ],
  "fields": [
   {
@@ -36,6 +38,7 @@
    "label": "App Name"
   },
   {
+   "description": "Header (\nUse Transparent Image for better view )",
    "fieldname": "application_logo",
    "fieldtype": "Attach",
    "label": "Application Logo"
@@ -74,12 +77,23 @@
    "fieldname": "background_colour_right",
    "fieldtype": "Color",
    "label": "Background Colour Right"
+  },
+  {
+   "fieldname": "header_logo_width",
+   "fieldtype": "Data",
+   "label": "Header Logo Width"
+  },
+  {
+   "description": "Favicon,Splash",
+   "fieldname": "favicon_logo",
+   "fieldtype": "Attach",
+   "label": "Logo"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-02-02 17:10:53.895868",
+ "modified": "2023-02-07 21:48:22.567581",
  "modified_by": "Administrator",
  "module": "Color Settings",
  "name": "Color Settings",

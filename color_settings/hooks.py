@@ -110,13 +110,17 @@ website_context = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# },
+	"color_settings":{
+		"on_update": "color_settings.color_settings.doctype.color_settings.color_settings.get_nav_logo"
+	}
+
+}
 
 # Scheduled Tasks
 # ---------------
