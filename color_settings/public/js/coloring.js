@@ -1,6 +1,6 @@
 $(window).on('load', function() {
     frappe.after_ajax(function () {  
-        $(`<div class="novaBrandingClass"><center><p class="novaBrandingText">Powered by</p> </center><a class="novaBrandingAttribute" href="https://novacept.io/" target="_blank"><img class="novaBrandingImage" src="https://i.postimg.cc/xXsCgdFB/color-Logo-Novacept.png" alt="logo" width="80"></a></div>`).insertAfter("#navbar-breadcrumbs")   
+        // $(`<div class="novaBrandingClass"><center><p class="novaBrandingText">Powered by</p> </center><a class="novaBrandingAttribute" href="https://novacept.io/" target="_blank"><img class="novaBrandingImage" src="https://i.postimg.cc/xXsCgdFB/color-Logo-Novacept.png" alt="logo" width="80"></a></div>`).insertAfter("#navbar-breadcrumbs")   
         if (frappe.boot.color_settings.navbar_background_color) {
             $(':root').css('--navbar-bg',frappe.boot.color_settings.navbar_background_color)
         } 
@@ -12,6 +12,9 @@ $(window).on('load', function() {
         } 
         if (frappe.boot.color_settings.secondary) {
             $(':root').css('--nova-secondary',frappe.boot.color_settings.secondary)
+        }
+        if (frappe.boot.color_settings.header_logo_height) {
+            $('.app-logo').css('height',frappe.boot.color_settings.header_logo_height+'px');
         } 
         if (frappe.boot.color_settings.container_bg_color) {
             $(':root').css('--bg-color', frappe.boot.color_settings.container_bg_color);

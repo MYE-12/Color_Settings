@@ -11,7 +11,7 @@ def whitelabel_patch():
 	if frappe.db.exists("Blog Post", "Welcome"):
 		frappe.db.set_value("Blog Post","Welcome","content","")
 	update_field_label()
-	if cint(get_frappe_version()) >= 13 and not frappe.db.get_single_value('Color Setting', 'ignore_onboard_whitelabel'):
+	if cint(get_frappe_version()) >= 13:
 		update_onboard_details()
 
 
