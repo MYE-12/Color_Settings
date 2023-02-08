@@ -16,6 +16,7 @@
   "column_break_4",
   "application_logo",
   "header_logo_width",
+  "header_logo_height",
   "branding_app_name",
   "card_color",
   "primary",
@@ -38,7 +39,7 @@
    "label": "App Name"
   },
   {
-   "description": "Header (\nUse Transparent Image for better view )",
+   "description": "Header,Splash (\nUse Transparent Image for better view )",
    "fieldname": "application_logo",
    "fieldtype": "Attach",
    "label": "Application Logo"
@@ -47,6 +48,7 @@
    "default": "0",
    "fieldname": "app_logo_set",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "App Logo Set"
   },
   {
@@ -84,16 +86,21 @@
    "label": "Header Logo Width"
   },
   {
-   "description": "Favicon,Splash",
+   "description": "Favicon,App Logo",
    "fieldname": "favicon_logo",
    "fieldtype": "Attach",
    "label": "Logo"
+  },
+  {
+   "fieldname": "header_logo_height",
+   "fieldtype": "Data",
+   "label": "Header Logo Height"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-02-07 21:48:22.567581",
+ "modified": "2023-02-08 22:27:34.662164",
  "modified_by": "Administrator",
  "module": "Color Settings",
  "name": "Color Settings",

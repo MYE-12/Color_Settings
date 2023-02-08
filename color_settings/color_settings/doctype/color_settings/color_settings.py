@@ -23,8 +23,8 @@ class ColorSettings(Document):
 
 		if frappe.db.exists("DocType","Navbar Settings") and self.application_logo:
 			frappe.db.set_value("Navbar Settings","Navbar Settings","app_logo",self.application_logo)
-			frappe.db.set_value("Website Settings","Website Settings","app_logo",self.application_logo)
-			frappe.db.set_value("Website Settings","Website Settings","splash_image",self.favicon_logo)
+			frappe.db.set_value("Website Settings","Website Settings","app_logo",self.favicon_logo)
+			frappe.db.set_value("Website Settings","Website Settings","splash_image",self.application_logo)
 			frappe.db.set_value("Website Settings","Website Settings","favicon",self.favicon_logo)
 			frappe.db.set_value("Navbar Settings","Navbar Settings","logo_width",self.header_logo_width)
    
@@ -36,6 +36,9 @@ class ColorSettings(Document):
 			frappe.db.set_value("Website Settings","Website Settings","favicon","")
 			frappe.db.set_value("Website Settings","Website Settings","splash_image","")
 			frappe.db.set_value("Website Settings","Website Settings","app_logo","")
+			frappe.db.set_value("Navbar Settings","Navbar Settings","logo_width",self.header_logo_width)
+   
+   
 			self.app_logo_set = 0
 			update_site_config("app_logo_url",False)
 			frappe.clear_cache()
