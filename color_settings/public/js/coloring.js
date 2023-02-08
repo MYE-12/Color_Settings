@@ -13,8 +13,11 @@ $(window).on('load', function() {
         if (frappe.boot.color_settings.secondary) {
             $(':root').css('--nova-secondary',frappe.boot.color_settings.secondary)
         }
+        if (frappe.boot.color_settings.header_logo_width) {
+            $('.app-logo').css('width',frappe.boot.color_settings.header_logo_width+'px');
+        }
         if (frappe.boot.color_settings.header_logo_height) {
-            $('.app-logo').css('height',frappe.boot.color_settings.header_logo_height+'px');
+            $('.app-logo').css('max-height',frappe.boot.color_settings.header_logo_height+'px');
         } 
         if (frappe.boot.color_settings.container_bg_color) {
             $(':root').css('--bg-color', frappe.boot.color_settings.container_bg_color);
