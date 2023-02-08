@@ -75,7 +75,7 @@ website_context = {
 
 # Installation
 # ------------
-
+	
 # before_install = "color_settings.install.before_install"
 # after_install = "color_settings.install.after_install"
 
