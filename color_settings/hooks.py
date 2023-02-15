@@ -10,7 +10,7 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "mohamedyousufesi46@gmail.com"
 app_license = "MIT"
-app_logo_url = '/assets/color_settings/images/logo.png'
+app_logo_url = '/assets/color_settings/images/MYE_Logo.png'
 
 # Includes in <head>
 # ------------------
@@ -51,8 +51,8 @@ app_include_css = "/assets/color_settings/css/novacept.css"
 #	"Role": "home_page"
 # }
 website_context = {
-	"favicon": app_logo or "/assets/color_settings/images/logo.png",
-	"splash_image": app_logo or "/assets/color_settings/images/logo.png"
+	"favicon": app_logo or "/assets/color_settings/images/MYE_Logo.png",
+	"splash_image": app_logo or "/assets/color_settings/images/MYE_Logo.png"
 }
 # update_website_context = "images.overrides.website_context"
 
