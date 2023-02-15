@@ -27,7 +27,6 @@ class ColorSettings(Document):
 			frappe.db.set_value("Website Settings","Website Settings","splash_image",self.favicon_logo)
 			frappe.db.set_value("Website Settings","Website Settings","favicon",self.favicon_logo)
 			# frappe.db.set_value("Navbar Settings","Navbar Settings","logo_width",self.header_logo_width)
-   
 			self.app_logo_set = 1
 			update_site_config("app_logo_url",self.application_logo)
 			frappe.clear_cache()
@@ -37,8 +36,16 @@ class ColorSettings(Document):
 			frappe.db.set_value("Website Settings","Website Settings","splash_image","")
 			frappe.db.set_value("Website Settings","Website Settings","app_logo","")
 			# frappe.db.set_value("Navbar Settings","Navbar Settings","logo_width",self.header_logo_width)
-   
-   
 			self.app_logo_set = 0
 			update_site_config("app_logo_url",False)
 			frappe.clear_cache()
+   
+		if not self.app_logo_set:
+			app_logo =frappe.get_hooks("app_logo_url")[1]
+			frappe.db.set_value("Navbar Settings","Navbar Settings","app_logo",app_logo)
+			frappe.db.set_value("Website Settings","Website Settings","favicon",app_logo)
+			frappe.db.set_value("Website Settings","Website Settings","splash_image",app_logo)
+			frappe.db.set_value("Website Settings","Website Settings","app_logo",app_logo)
+			frappe.errprint(frappe.get_hooks("app_logo_url")[1])
+			frappe.clear_cache()
+   
