@@ -46,6 +46,8 @@ class ColorSettings(Document):
 			frappe.clear_cache()
    
 		if not self.favicon_logo:
+			app_logo =frappe.get_hooks("app_logo_url")[1]
+      
 			frappe.db.set_value("Website Settings","Website Settings","favicon",app_logo)
 			frappe.db.set_value("Website Settings","Website Settings","splash_image",app_logo)
 			frappe.db.set_value("Website Settings","Website Settings","app_logo",app_logo)
