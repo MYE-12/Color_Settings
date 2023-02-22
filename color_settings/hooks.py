@@ -18,6 +18,7 @@ app_logo_url = '/assets/color_settings/images/MYE_Logo.png'
 # include js, css files in header of desk.html
 # app_include_css = "/assets/color_settings/css/color_settings.css"
 app_include_js = "/assets/color_settings/js/coloring.js"
+web_include_js = "/assets/color_settings/js/login.js"
 
 # include js, css files in header of web template
 web_include_css = "/assets/color_settings/css/login.css"
@@ -54,7 +55,9 @@ website_context = {
 	"favicon": app_logo or "/assets/color_settings/images/MYE_Logo.png",
 	"splash_image": app_logo or "/assets/color_settings/images/MYE_Logo.png"
 }
-# update_website_context = "images.overrides.website_context"
+# update_website_context = "color_settings.color_settings.doctype.color_settings.color_settings.update_website_context"
+
+# on_logout = "color_settings.api.update_website_context"
 
 
 
