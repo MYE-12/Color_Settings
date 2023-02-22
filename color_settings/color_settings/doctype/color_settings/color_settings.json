@@ -12,9 +12,9 @@
   "container_bg_color",
   "font_color",
   "secondary",
+  "application_logo",
   "favicon_logo",
   "column_break_4",
-  "application_logo",
   "header_logo_width",
   "header_logo_height",
   "branding_app_name",
@@ -73,6 +73,7 @@
   {
    "fieldname": "font_color",
    "fieldtype": "Color",
+   "hidden": 1,
    "label": "Text Color"
   },
   {
@@ -100,7 +101,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-02-08 22:27:34.662164",
+ "modified": "2023-02-23 00:17:31.783234",
  "modified_by": "Administrator",
  "module": "Color Settings",
  "name": "Color Settings",

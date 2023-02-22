@@ -1,8 +1,8 @@
 :root {
   --nova-primary: #eff1f0;
-  --nova-secondary: #ced6d3;
+  --nova-secondary: #ffffff;
   --primary: var(--nova-primary);
-  --n-white: #fffefe;
+  --n-white: #ffffff;
   --bg-color: var(--n-white);
   --bg-gradiant: linear-gradient(90deg, #A52A2A.#FFE4C4);
   --red: 45;
@@ -16,7 +16,7 @@
   --perceived-lightness: calc(var(--sum) / 255);
   --ncolor-white: hsl(0, 0%, calc((var(--perceived-lightness) - var(--threshold)) * -10000000%));
   /* --bg-gradiant: linear-gradient(90deg,rgba(56,189,248,0),#0ea5e90f 32.29%,#6c227d00 67.19%,rgb(236 72 153 / 4%)); */
-  --navbar-bg: var(--n-white);
+  --navbar-bg: var(--ncolor-white);
   --fg-hover-color: #c6d8e8;
   --awesomplete-hover-bg: #8e6ebb;
   --sidebar-select-color: var(--nova-secondary);
@@ -25,9 +25,27 @@
   --avatar-color-text: white;
   --dropdown-bg-color: #f3f3f3;
   --n-black: rgb(0, 0, 0);
+  --red1:45;
+  --green1:45;
+  --blue1:45;
+  --threshold1: 0.5;
+
+  --r1: calc(var(--red1) * 0.2126);
+  --g1: calc(var(--green1) * 0.7152);
+  --b1: calc(var(--blue1) * 0.0722);
+  --sum1: calc(var(--r1) + var(--g1) + var(--b1));
+  --perceived-light: calc(var(--sum1) / 255);
+  --change-color: hsl(0, 0%, calc((var(--perceived-light) - var(--threshold1)) * -10000000%));
+
+
 
 
 }
+
+.sidebar-item-label{
+  color: var(--change-color) !important;
+}
+
 
 .page-container {
   background-image: var(--bg-gradiant) !important;
@@ -43,7 +61,7 @@
 }
 
 .page-title .sidebar-toggle-btn {
-  --icon-stroke: var(--n-white);
+  --icon-stroke: var(--change-color);
   background: var(--nova-secondary);
   border-radius: 50%;
   padding: 5px;
@@ -65,7 +83,7 @@
 
 .standard-sidebar-label {
   text-indent: 15px;
-  color: var(--n-white);
+  color: var(--ncolor-white);
 }
 
 .menu-btn-group-label,
@@ -80,7 +98,7 @@
 }
 
 .layout-side-section .sidebar-label {
-  color: var(--bg-color);
+  color: var(--change-color);
 }
 
 .icon-btn {
@@ -88,7 +106,7 @@
 }
 
 .layout-side-section .sidebar-label .icon {
-  --icon-stroke: var(--n-white);
+  --icon-stroke: var(--change-color);
 }
 
 div#driver-popover-item .driver-popover-footer button.driver-close-btn {
@@ -101,11 +119,11 @@ div#driver-popover-item .driver-popover-footer button.driver-close-btn {
 }
 
 #navbar-breadcrumbs a {
-  color: var(--ncolor-white);
+  color: var(--ncolor-white )!important;
 }
 
 #navbar-breadcrumbs li.disabled a {
-  --text-muted: var(--ncolor-white) !important;
+  --text-muted: var(--n-white) !important;
 }
 
 #navbar-breadcrumbs a:before {
@@ -155,11 +173,11 @@ div#driver-popover-item .driver-popover-footer button.driver-next-btn:not(:disab
 .desk-sidebar .standard-sidebar-item a,
 .search-dialog .search-results .search-sidebar .standard-sidebar-item a,
 .standard-sidebar .standard-sidebar-item a {
-  --text-color: var(--n-white);
+  --text-color: var(--ncolor-white);
 }
 
 .standard-sidebar-item svg {
-  --icon-stroke: var(--n-white);
+  --icon-stroke: var(--change-color);
 }
 
 .standard-image {
@@ -174,7 +192,7 @@ div#driver-popover-item .driver-popover-footer button.driver-next-btn:not(:disab
 }
 
 .overlay-sidebar .text-muted {
-  --text-muted: #dadada;
+  --text-muted: var(--change-color);
 }
 
 .notifications-seen .icon {
@@ -212,13 +230,13 @@ div#driver-popover-item .driver-popover-footer button.driver-next-btn:not(:disab
 }
 
 .page-actions .btn-default {
-  --fg-color: var(--nova-secondary);
+  /* --fg-color: var(--nova-secondary); */
   --text-color: var(--n-white);
 }
 
 .page-actions .btn-default:hover {
   --fg-hover-color: var(--nova-primary);
-  --text-color: var(--n-white);
+  --text-color: var(--ncolor-white);
 }
 
 .page-actions .btn-default .icon {
