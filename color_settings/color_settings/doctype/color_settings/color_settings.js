@@ -13,10 +13,9 @@ frappe.ui.form.on('Color Settings', {
 	// },
 	after_save: function(frm) {
 		// if(frm.doc.__islocal){
-		console.log('hi')
 		frappe.ui.toolbar.clear_cache();
-		frm.refresh()
-		frm.reload_doc()
+		// frm.refresh()
+		// frm.reload_doc()
 
 		// }
 	}
