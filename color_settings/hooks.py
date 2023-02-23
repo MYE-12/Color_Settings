@@ -118,7 +118,11 @@ website_context = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+doc_events = {
+    
+    "Color Settings": {
+		"after_insert": "color_settings.color_settings.doctype.color_settings.color_settings.nav_logo"
+	},
 	# "*": {
 	# 	"on_update": "method",
 	# 	"on_cancel": "method",
@@ -126,7 +130,7 @@ website_context = {
 	# },
 	
 
-# }
+}
 
 # Scheduled Tasks
 # ---------------

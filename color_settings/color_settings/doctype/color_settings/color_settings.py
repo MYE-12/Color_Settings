@@ -24,60 +24,64 @@ class ColorSettings(Document):
                 else:
                     frappe.db.set_value(
                         "System Settings", "System Settings", "app_name", "Frappe")
-        logo = "/assets/color_settings/images/logo1.png"
-        frappe.errprint(logo)
-
+            
+        
         if frappe.db.exists("DocType", "Navbar Settings") and self.application_logo:
-            frappe.db.set_value(
-                "Navbar Settings", "Navbar Settings", "app_logo", self.application_logo)
-            frappe.db.set_value(
-                "Website Settings", "Website Settings", "app_logo", self.favicon_logo)
-            frappe.db.set_value(
-                "Website Settings", "Website Settings", "splash_image", self.favicon_logo)
-            frappe.db.set_value(
-                "Website Settings", "Website Settings", "favicon", self.favicon_logo)
+            frappe.db.set_value("Navbar Settings", "Navbar Settings", "app_logo", self.application_logo)
+            frappe.db.set_value("Website Settings", "Website Settings", "app_logo", self.favicon_logo)
+            frappe.db.set_value("Website Settings", "Website Settings", "splash_image", self.favicon_logo)
+            frappe.db.set_value("Website Settings", "Website Settings", "favicon", self.favicon_logo)
             # frappe.db.set_value("Navbar Settings","Navbar Settings","logo_width",self.header_logo_width)
             self.app_logo_set = 1
             update_site_config("app_logo_url", self.application_logo)
             frappe.clear_cache()
         if self.app_logo_set and not self.application_logo:
-            frappe.db.set_value("Navbar Settings",
-                                "Navbar Settings", "app_logo", "")
-            frappe.db.set_value("Website Settings",
-                                "Website Settings", "favicon", "")
-            frappe.db.set_value("Website Settings",
-                                "Website Settings", "splash_image", "")
-            frappe.db.set_value("Website Settings",
-                                "Website Settings", "app_logo", "")
+            frappe.db.set_value("Navbar Settings","Navbar Settings", "app_logo", "")
+            frappe.db.set_value("Website Settings","Website Settings", "favicon", "")
+            frappe.db.set_value("Website Settings","Website Settings", "splash_image", "")
+            frappe.db.set_value("Website Settings","Website Settings", "app_logo", "")
             # frappe.db.set_value("Navbar Settings","Navbar Settings","logo_width",self.header_logo_width)
             self.app_logo_set = 0
             update_site_config("app_logo_url", False)
             frappe.clear_cache()
 
-        if not self.application_logo:
+        if not self.app_logo_set  and self.application_logo:
             app_logo = frappe.get_hooks("app_logo_url")[1]
             frappe.errprint(app_logo)
-            frappe.db.set_value("Navbar Settings",
-                                "Navbar Settings", "app_logo", app_logo)
-            update_site_config("app_logo_url", False)
-            frappe.clear_cache()
-
-        if not self.favicon_logo:
-            app_logo_f = frappe.get_hooks("app_logo_url")[1]
-            frappe.db.set_value("Website Settings",
-                                "Website Settings", "favicon", app_logo_f)
-            frappe.db.set_value("Website Settings",
-                                "Website Settings", "splash_image", app_logo_f)
-            frappe.db.set_value("Website Settings",
-                                "Website Settings", "app_logo", app_logo_f)
-            frappe.errprint(frappe.get_hooks("app_logo_url")[1])
-            update_site_config("app_logo_url", False)
-
-            frappe.clear_cache()
-
-        if self.navbar_background_color == "#ffffff" or '':
             frappe.db.set_value("Navbar Settings","Navbar Settings", "app_logo", app_logo)
-            frappe.errprint("LVU")
-        else:
-            frappe.db.set_value("Navbar Settings","Navbar Settings", "app_logo", logo)
-            frappe.errprint("piss")
+            self.app_logo_set = 0
+            
+            update_site_config("app_logo_url", False)
+            frappe.clear_cache()
+
+        if not self.app_logo_set and self.favicon_logo:
+            app_logo_f = frappe.get_hooks("app_logo_url")[1]
+            frappe.db.set_value("Website Settings","Website Settings", "favicon", app_logo_f)
+            frappe.db.set_value("Website Settings","Website Settings", "splash_image", app_logo_f)
+            frappe.db.set_value("Website Settings","Website Settings", "app_logo", app_logo_f)
+            # frappe.errprint(frappe.get_hooks("app_logo_url")[1])
+            update_site_config("app_logo_url", False)
+
+            frappe.clear_cache()
+           
+        # if self.navbar_background_color == "#ffffff" or '':
+            
+        #     frappe.db.set_value("Navbar Settings","Navbar Settings", "app_logo", app_logo)
+        #     frappe.errprint("LVU")
+        # else:
+        #     frappe.db.set_value("Navbar Settings","Navbar Settings", "app_logo", logo)
+        #     frappe.errprint("piss")
+            
+        # self.reload()
+@frappe.whitelist()
+def nav_logo(doc,method):
+    app_logo_l = frappe.get_hooks("app_logo_url")[1]
+    logo = "/assets/color_settings/images/logo1.png"
+    if doc.navbar_background_color == "#ffffff" or '':
+        frappe.db.set_value("Navbar Settings","Navbar Settings", "app_logo", app_logo_l)
+        frappe.errprint("LVU")
+    else:
+        frappe.db.set_value("Navbar Settings","Navbar Settings", "app_logo", logo)
+        frappe.errprint("piss")
+        frappe.clear_cache()
+    

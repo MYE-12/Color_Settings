@@ -1,11 +1,11 @@
 $(window).on('load', function () {
     frappe.after_ajax(function () {
         if (frappe.boot.color_settings.navbar_background_color == "#ffffff" ) {
-        console.log('white')
+        // console.log('white')
         $(`<div class="novaBrandingClass"><center><p class="novaBrandingText">Powered by</p> </center><a class="novaBrandingAttribute" href="https://novacept.io/" target="_blank"><img class="novaBrandingImage" src="https://i.postimg.cc/xXsCgdFB/color-Logo-Novacept.png" alt="logo" width="80"></a></div>`).insertAfter("#navbar-breadcrumbs")
         }
         else{
-            console.log('black')
+            // console.log('black')
         $(`<div class="novaBrandingClass"><center><p class="novaBrandingText">Powered by</p> </center><a class="novaBrandingAttribute" href="https://novacept.io/" target="_blank"><img class="novaBrandingImage" src="https://i.postimg.cc/w74t2KCC/white-nova-logo.png" alt="logo" width="80"></a></div>`).insertAfter("#navbar-breadcrumbs")
             
         }
@@ -16,13 +16,13 @@ $(window).on('load', function () {
                 return fullHex(hex); 
             } 
             const r = parseInt(hex.slice(1, 3), 16); 
-            console.log(r)
+            // console.log(r)
             const g = parseInt(hex.slice(3, 5), 16); 
             const b = parseInt(hex.slice(5, 7), 16); 
             return { r, g, b }; 
             }
             const rgb = hex2rgb(frappe.boot.color_settings.navbar_background_color)
-            console.log(rgb)
+            // console.log(rgb)
             $(':root').css('--red',rgb.r)
             $(':root').css('--green',rgb.g)
             $(':root').css('--blue',rgb.b)
